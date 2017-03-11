@@ -1,4 +1,10 @@
-new DroneDeploy({version: 1}).then(function(api){
+angular.module('app', [])
+
+.controller('appCtrl', function($scope){
+
+  $scope.test = 'PDF';
+
+  new DroneDeploy({version: 1}).then(function(api){
   console.log('DroneDeploy Api: ', api);
   api.Plans.getCurrentlyViewed().then(function(plan){
     console.log(plan);
@@ -18,8 +24,13 @@ new DroneDeploy({version: 1}).then(function(api){
   });
 
 });
-  
 });
+
+
+
+})
+
+
 
 
 
